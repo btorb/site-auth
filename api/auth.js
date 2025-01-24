@@ -8,6 +8,7 @@ export default async function handler(req, res) {
   
       if (username === validUsername && password === validPassword) {
         // Authentication successful
+        res.setHeader('Access-Control-Allow-Origin', '*'); // Add this line here
         res.status(200).json({ success: true });
       } else {
         // Authentication failed
