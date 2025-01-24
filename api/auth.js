@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   
       // **IMPORTANT:** Replace these with your actual credentials
       const validUsername = 'your_username'; 
-      const validPassword = 'your_password';
+      const validPassword = process.env.SITE_PASSWORD; 
   
       if (username === validUsername && password === validPassword) {
         // Authentication successful
